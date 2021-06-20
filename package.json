@@ -1,0 +1,22 @@
+{
+  "name": "giveaway-proxy",
+  "version": "1.0.0",
+  "description": "Giveaway Bot created with discord.js and discord-giveaways",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Greblue",
+  "license": "ISC",
+  "dependencies": {
+    "cpu-stat": "^2.0.1",
+    "discord-buttons": "^3.2.1",
+    "discord-giveaways": "^4.4.3",
+    "discord.js": "^12.5.1",
+    "moment": "^2.29.1",
+    "moment-duration-format": "^2.3.2",
+    "ms": "^2.1.3",
+    "node-fetch": "^2.6.1",
+    "quick.db": "^7.1.3"
+  }
+}
