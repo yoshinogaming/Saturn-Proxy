@@ -9,6 +9,6 @@ echo Script By Zrenity1#0001
 echo Version 1.5
 echo ====================
 
-node index.js
+npm install
 pause
 goto top
