@@ -43,11 +43,11 @@ exports.run = async (client, message, args) => {
             giveaway: (client.config.everyoneMention ? "@everyone\n\n" : "")+`${emojis.giveaway} **GIVEAWAY STARTED** ${emojis.giveaway}`,
             giveawayEnded: (client.config.everyoneMention ? "@everyone\n\n" : "")+`${emojis.giveaway} **GIVEAWAY ENDED** ${emojis.giveaway}`,
             timeRemaining: `${emojis.bell} | Time remaining: {duration}`,
-            inviteToParticipate: `${emojis.info} | React with ${config.reaction} to participate!\n${emojis.gift} | Prize: ${giveawayPrize}\n${emojis.star} | Winner(s): ${giveawayNumberWinners}`,
+            inviteToParticipate: `${emojis.info} | React with ${config.reaction} to participate!\n${emojis.star} | Winner(s): ${giveawayNumberWinners}`,
             winMessage: `${emojis.giveaway} | Congratulations, {winners}! You won **${giveawayPrize}**!`,
             embedFooter: "Giveaways",
             noWinner: "Giveaway cancelled, no valid participations.",
-            hostedBy: `${emojis.staff} | Hosted by: ${message.author}`,
+            hostedBy: `${emojis.staff} | Hosted by: ${message.author}\n${emojis.gift} | Prize: ${giveawayPrize}`,
             //winners: `${emojis.star} | winner(s)`,
             endedAt: "Ended at",
             units: {
