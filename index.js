@@ -56,3 +56,5 @@ fs.readdir("./commands/", (_err, files) => {
 });
 
 client.login(config.token);
+
+// JANCOK JANCOK HAYUK BAPAK LO NGENTOT!
