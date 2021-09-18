@@ -21,14 +21,15 @@ exports.run = async (client, message, args) => {
 
     const embed = new Discord.MessageEmbed()
       .setAuthor(`${client.user.username} Information`, client.user.displayAvatarURL())
+      .setImage("https://media.discordapp.net/attachments/846660862067474443/888776119044689960/20210918_201851.jpg")
       .setThumbnail(client.user.displayAvatarURL({ size: 2048 }))
       .setColor(config.color)
       .setFooter(`Replying to ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))
       .addFields(
         { name: 'Information', value: `Developer: ${Dev}\nName: ${client.user.tag}\nPrefix: ${config.prefix}\nCreated since: May 31, 2021` },
-        { name: `Statistics`, value: `Guilds: ${guild}\nUsers: ${user}\nMemory Usage: ${usage}/8 GB\nCPU Usage: ${CPU}%\nUptime: ${parseDur(client.uptime)}` }
+        { name: `Statistics`, value: `Guilds: ${guild}\nUsers: ${user}\nMemory Usage: ${usage}/8 GB\nCPU Usage: ${CPU}%\nUptime: ${parseDur(client.uptime)}` },
+        { name: `Powered By VULTR Cloud Hosting.`, value: `For more Information go to https://vultr.com.` }
       )
-      .setTimestamp()
 
     message.channel.send(embed);
   })

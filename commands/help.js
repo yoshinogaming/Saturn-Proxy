@@ -6,7 +6,7 @@ exports.run = async (client, message, args) => {
     const embed = new Discord.MessageEmbed()
     .setAuthor(`Help Menu`, client.user.displayAvatarURL())
     .setThumbnail(client.user.displayAvatarURL({ size: 2048 }))
-    .setDescription(`Invite me! ➔ [Click here](https://discord.com/oauth2/authorize?client_id=848751663056814080&permissions=1544014960&scope=bot)!\nVote ➔ [Click here](https://top.gg/bot/795281781687451649/vote)!`)
+    .setDescription(`Invite me! ➔ [Click here](https://discord.com/oauth2/authorize?client_id=848751663056814080&permissions=1544014960&scope=bot)!\nVote ➔ [Click here](https://top.gg/bot/848751663056814080/vote)!`)
     .addField(`Giveaways`, "`start` | `reroll` | `end`")
     .addField(`Moderation`, "`warn` | `warns` | `reset-warn`")
     .addField(`Support`, "`invite` | `vote`")

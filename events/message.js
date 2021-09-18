@@ -1,5 +1,6 @@
 const config = require("../config.json");
 const ch = require("../channels.json");
+const fetch = require("node-fetch");
 
 module.exports = (client, message) => {
   if (message.author.bot) return;
