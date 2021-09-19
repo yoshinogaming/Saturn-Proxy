@@ -1,16 +1,15 @@
-﻿const ms = require('ms');
-const config = require("../config.json");
+﻿const config = require("../config.json");
 const Discord = require("discord.js");
 
 exports.run = async (client, message, args) => {
+    const Dev = `${client.users.cache.get(config.owner).username}#${client.users.cache.get(config.owner).discriminator}`
+
     const embed = new Discord.MessageEmbed()
     .setAuthor(`Help Menu`, client.user.displayAvatarURL())
     .setThumbnail(client.user.displayAvatarURL({ size: 2048 }))
-    .setDescription(`Invite me! ➔ [Click here](https://discord.com/oauth2/authorize?client_id=848751663056814080&permissions=1544014960&scope=bot)!\nVote ➔ [Click here](https://top.gg/bot/848751663056814080/vote)!`)
-    .addField(`Giveaways`, "`start` | `reroll` | `end`")
-    .addField(`Moderation`, "`warn` | `warns` | `reset-warn`")
-    .addField(`Support`, "`invite` | `vote`")
-    .addField(`Other`, "`about` | `ping` | `link`")
+    .setDescription(`**Saturn Proxy** is a cool Discord Bot, created by **${Dev}** in **May 31, 2021**.\n**Saturn Proxy** mission is to **help** people manage their server, telling a **information** and bringing **fun** to others.`)
+    .addField(`Get Started`, `To start using **Saturn Proxy** type **${client.config.prefix}commands**.\nto start a Giveaway type \n\`${client.config.prefix}start <#Channel)> <Duration> [Winner] [Prize]\``, true)
+    .addField(`Please Note`, "We will add a **awesome features** soon! so be ready, and get **Saturn Proxy** on your server! and don't forget to vote Saturn Proxy at **Top.gg**!", true)
     .setTimestamp()
     .setColor(config.color)
     .setFooter(`Replying to ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))
