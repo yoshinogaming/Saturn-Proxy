@@ -1,14 +1,17 @@
+// Main
 const fs = require('fs');
-
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const disbut = require('discord-buttons')(client);
 
+// Config
+client.commands = new Discord.Collection();
 const config = require('./config.json');
 const emojis = require('./emoji.json');
 client.emojis = emojis
 client.config = config;
 
+// Giveaway Manager
 const { GiveawaysManager } = require('discord-giveaways');
 client.giveawaysManager = new GiveawaysManager(client, {
     storage: "./storage.json",
@@ -32,6 +35,7 @@ client.giveawaysManager.on("giveawayEnded", (giveaway, winners) => {
     console.log(`Giveaway #${giveaway.messageID} ended! Winners: ${winners.map((member) => member.user.username).join(', ')}`);
 });
 
+// Events Handler
 fs.readdir("./events/", (_err, files) => {
     files.forEach((file) => {
         if (!file.endsWith(".js")) return;
@@ -43,8 +47,7 @@ fs.readdir("./events/", (_err, files) => {
     });
 });
 
-client.commands = new Discord.Collection();
-
+// Commands Handler
 fs.readdir("./commands/", (_err, files) => {
     files.forEach((file) => {
         if (!file.endsWith(".js")) return;
