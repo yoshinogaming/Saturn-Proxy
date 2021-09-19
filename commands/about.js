@@ -27,7 +27,7 @@ exports.run = async (client, message, args) => {
       .setFooter(`Replying to ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))
       .addFields(
         { name: 'Information', value: `Developer: ${Dev}\nName: ${client.user.tag}\nPrefix: ${config.prefix}\nCreated since: May 31, 2021` },
-        { name: `Statistics`, value: `Guilds: ${guild}\nUsers: ${user}\nMemory Usage: ${usage}/8 GB\nCPU Usage: ${CPU}%\nUptime: ${parseDur(client.uptime)}` },
+        { name: `Statistics`, value: `Guilds: ${guild}\nUsers: ${user}\nMemory Usage: ${usage}\nCPU Usage: ${CPU}%\nUptime: ${parseDur(client.uptime)}` },
         { name: `Powered By VULTR Cloud Hosting.`, value: `For more Information go to https://vultr.com.` }
       )
 
