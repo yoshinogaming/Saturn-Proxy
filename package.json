@@ -1,10 +1,10 @@
 {
-  "name": "giveaway-proxy",
+  "name": "saturn-proxy",
   "version": "1.0.0",
-  "description": "Giveaway Bot created with discord.js and discord-giveaways",
+  "description": "Saturn Proxy Lmao XD",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "start": "node index.js"
   },
   "author": "Greblue",
   "license": "ISC",
