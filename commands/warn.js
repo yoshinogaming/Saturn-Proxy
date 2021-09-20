@@ -29,8 +29,7 @@ exports.run = async (client, message, args) => {
 
     const embed = new discord.MessageEmbed()
         .setFooter(message.guild.name, message.guild.iconURL({ size: 2048 }))
-        .setTitle('You got warned!')
-        .setDescription(`Moderator: ${message.author.tag}\nReason: ${reason1}`)
+   		.addField(`${emojis.bell} | You got warned!`, `Moderator: **${message.author.tag}**\nReason: \`${reason1}\``)
         .setColor(config.color)
         .setTimestamp()
 
@@ -40,7 +39,7 @@ exports.run = async (client, message, args) => {
         const well4 = new Discord.MessageEmbed()
             .setColor(config.color)
             .setTimestamp()
-            .setDescription(`${emojis.yes} | ${user.tag} has been warned!\nReason: ${reason1}`)
+        	.addField(`${emojis.yes} | Successfully Warned!`, `**${user.tag}** has been warned!\nReason \`${reason1}\``)
             .setFooter(`Replying to ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))
         user.send(embed).then(() => message.channel.send(well4)).catch(() => message.channel.send(`${emojis.no} | Something wrong.. try again.`));
     }

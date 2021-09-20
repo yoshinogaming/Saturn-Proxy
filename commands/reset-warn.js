@@ -26,13 +26,13 @@ if(warnings === null) {
 
     const embed = new discord.MessageEmbed()
     .setFooter(`Replying to ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))
-    .setDescription(`${emojis.yes} | ${user} warning(s) has been successfully reset!`)
+    .addField(`${emojis.yes} | Warning Reset!`, `**${user.tag}** warning(s) has been successfully reset!`)
     .setTimestamp()
     .setColor(config.color)
 
     db.delete(`warning_${message.guild.id}_${user.id}`)
     db.delete(`latestwarn.${user.id}`);
     message.channel.send(embed).catch(() => message.channel.send("Something wrong.. try again."))
-    user.send(`${emojis.yes} | Your warning(s) has been reset by \`${message.author.tag}\` from \`${message.guild.name}\``)
+    user.send(`${emojis.bell} | Your warning(s) has been reset by \`${message.author.tag}\` from \`${message.guild.name}\``)
 
 }

@@ -22,7 +22,7 @@ exports.run = async (client, message, args) => {
 
     const embed = new discord.MessageEmbed()
     .setFooter(`Replying to ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))
-    .setDescription(`${emojis.yes} | ${user.tag} have \`${warnings}\` warning(s)\nLatest warning: ${latest}`)
+    .addField(`${emojis.yes} | Warning List`, `**${user.tag}** have \`${warnings}\` warning(s)\nLatest warning: \`${latest}\``)
     .setTimestamp()
     .setColor(config.color)
 
