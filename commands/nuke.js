@@ -9,7 +9,7 @@ exports.run = async (client, message, args) => {
     var posisi = channel.position;
  
     const embed = new Discord.MessageEmbed()
-    .addField(`Nuked`, `${emojis.yes} | Channel has been nuked.`)
+    .addField(`${emojis.yes} Nuked`, `Channel has been nuked.`)
     .setColor(config.color)
     .setTimestamp()
 

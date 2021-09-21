@@ -11,7 +11,7 @@ exports.run = async (client, message, args) => {
 
     if (member.user.id === config.owner) {
         const owner = new Discord.MessageEmbed()
-            .addField(`${emojis.yes} | Are you a gay?`, `**${member.user.tag}** is **0%** gay!`)
+            .addField(`${emojis.yes} Are you a gay?`, `**${member.user.tag}** is **0%** gay!`)
             .setTimestamp()
             .setColor(config.color)
             .setFooter(`Replying to ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))
@@ -20,7 +20,7 @@ exports.run = async (client, message, args) => {
     }
 
     const embed = new Discord.MessageEmbed()
-        .addField(`${emojis.yes} | Are you a gay?`, `**${member.user.tag}** is **${random}%** gay!`)
+        .addField(`${emojis.yes} Are you a gay?`, `**${member.user.tag}** is **${random}%** gay!`)
         .setTimestamp()
         .setColor(config.color)
         .setFooter(`Replying to ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))

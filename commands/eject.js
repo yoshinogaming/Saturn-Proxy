@@ -15,7 +15,7 @@ exports.run = async (client, message, args) => {
     const data = await fetch(`https://vacefron.nl/api//ejected?name=${member.username}&impostor=${suss}&crewmate=${colors}`) 
     
     const embed = new Discord.MessageEmbed()
-    .addField(`${emojis.yes} | Ejected!`, `Oh no.. **${member.tag}** got ejected!`)
+    .addField(`${emojis.info} Ejected!`, `Oh no.. **${member.tag}** got ejected!`)
     .setImage(`${data.url}`)
     .setTimestamp()
     .setColor(config.color)
