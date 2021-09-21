@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client({
     partials: ['MESSAGE', 'CHANNEL', 'REACTION']
 });
-const disbut = require('discord-buttons')(client);
+const disbut = require("discord-buttons")(client);
 
 // Config
 client.commands = new Discord.Collection();
@@ -12,6 +12,36 @@ const config = require('./config.json');
 const emojis = require('./emoji.json');
 client.emojis = emojis
 client.config = config;
+
+
+// Discord Button
+const { MessageButton, MessageActionRow } = require('discord-buttons');
+
+client.on('clickButton', async (button) => {
+    if (button.id == "nukeyes") {
+        await button.defer()
+
+        let channel = client.channels.cache.get(button.channel.id)
+        var posisi = channel.position;
+
+        const embed = new Discord.MessageEmbed()
+            .addField(`${emojis.yes} Nuked`, `Channel has been nuked.`)
+            .setColor(config.color)
+            .setTimestamp()
+
+        channel.clone().then((channel2) => {
+            channel2.setPosition(posisi)
+            channel.delete()
+            channel2.send(embed).then(m => m.delete({ timeout: 30000 }));
+        })
+    }
+
+    if (button.id == "nukeno") {
+        await button.defer()
+        button.channel.send(`${emojis.no} Channel nuking has been canceled!`).then(m => m.delete({ timeout: 30000 }));
+        button.message.delete()
+    }
+})
 
 // Giveaway Manager
 const { GiveawaysManager } = require('discord-giveaways');

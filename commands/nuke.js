@@ -1,21 +1,25 @@
 const config = require("../config.json");
 const Discord = require("discord.js");
 const emojis = require("../emoji.json");
+const { MessageButton, MessageActionRow } = require('discord-buttons');
 
 exports.run = async (client, message, args) => {
     if (!message.member.hasPermission("MANAGE_CHANNELS")) return message.channel.send(`${emojis.no} | You need **Manage_Guild** permission to run this command!`);
 
-    let channel = client.channels.cache.get(message.channel.id)
-    var posisi = channel.position;
- 
-    const embed = new Discord.MessageEmbed()
-    .addField(`${emojis.yes} Nuked`, `Channel has been nuked.`)
-    .setColor(config.color)
-    .setTimestamp()
+    const btn1 = new MessageButton()
+    .setStyle('green')
+    .setLabel("Yes")
+    .setID("nukeyes")
 
-    channel.clone().then((channel2) => {
-      channel2.setPosition(posisi)
-      channel.delete()
-      channel2.send(embed);
-    })
+    const btn2 = new MessageButton()
+    .setStyle('red')
+    .setLabel("No")
+    .setID("nukeno")
+
+    const btn = new MessageActionRow()
+    .addComponent(btn1)
+    .addComponent(btn2)
+
+
+    message.channel.send(`${emojis.exclamation} Are you sure want to nuke(re-create) <#${message.channel.id}>?`, { component: btn })
 }

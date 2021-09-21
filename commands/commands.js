@@ -12,7 +12,7 @@ exports.run = async (client, message, args) => {
     .addField(`${emojis.gift} Giveaways`, "`start` | `reroll` | `end`")
     .addField(`${emojis.support} Support`, "`invite` | `vote`")
     .addField(`${emojis.normal} Other`, "`ping` | `link`")
-    .addField(`${emojis.star} Fun`, "`gender` | `eject` | `howgay`")
+    .addField(`${emojis.star} Fun`, "`gender` | `eject` | `howgay` | `rps`")
     .setTimestamp()
     .setColor(config.color)
     .setFooter(`Replying to ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))
