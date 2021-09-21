@@ -9,7 +9,7 @@ exports.run = async (client, message, args) => {
 
     let countries = args;
 
-    if (!arg1) return message.channel.send(`${emojis.no} | Try again with the Country name!`)
+    if (!arg1) return message.channel.send(`${emojis.no} | Try again with the Country name!\nExample: \`${config.prefix}corona Indonesia\``)
 
     fetch(`https://corona.lmao.ninja/v2/countries/${countries}`)
         .then(res => res.json())

@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
     .setAuthor(`Commands Menu`, client.user.displayAvatarURL())
     .setThumbnail(client.user.displayAvatarURL({ size: 2048 }))
     .setDescription(`Invite me! ➔ [click here](https://discord.com/oauth2/authorize?client_id=848751663056814080&permissions=1544014960&scope=bot)!\nVote ➔ [click here](https://top.gg/bot/848751663056814080/vote)!`)
-    .addField(`${emojis.info} Information`, "`bot-info` | `weather` | `corona`")
+    .addField(`${emojis.info} Information`, "`bot-info` | `weather` | `corona` `anime` | `docs`")
     .addField(`${emojis.mod} Moderation`, "`nuke` | `warn` | `warns` | `reset-warn`")
     .addField(`${emojis.gift} Giveaways`, "`start` | `reroll` | `end`")
     .addField(`${emojis.support} Support`, "`invite` | `vote`")

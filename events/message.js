@@ -13,7 +13,7 @@ module.exports = (client, message) => {
 
   // Chat Bot
   if (ch.ch1.includes(message.channel.id)) {
-    fetch(`https://api.monkedev.com/fun/chat?msg=${message.content}%20there!&uid=${message.author.id}`)
+    fetch(`https://api.monkedev.com/fun/chat?msg=${message.content}&uid=${message.author.id}`)
       .then(response => response.json())
       .then(data => {
         message.reply(data.response)
