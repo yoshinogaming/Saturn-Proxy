@@ -33,6 +33,6 @@ exports.run = async (client, message, args) => {
                 .setFooter(`Replying to ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))
 
             message.channel.send(embed);
-            // Let's test it out!
+            // Kapan Corona Selesai Sih Ngentotttt!
         })
 }
