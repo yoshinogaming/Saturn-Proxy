@@ -26,5 +26,7 @@ exports.run = async (client, message, args) => {
             .setTimestamp()
             .setFooter(`Replying to ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))
         return message.channel.send(embed);
+
+        // I HATE ANIME NGL, ITS SO BORING AND ITS 18+ LOL. I MADE THIS COMMAND JUST FOR FUN, NOT BECAUSE I LOVE ANIME LOLOLOLOLOLOLOL
     })
 }
