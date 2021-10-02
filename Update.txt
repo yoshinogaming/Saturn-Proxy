@@ -1,0 +1,8 @@
+## 9/26/2021
+
+- help.js
+- commands.js
+- balance.js
+- daily.js
+- transfer.js
+- gamble.js

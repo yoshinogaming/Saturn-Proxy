@@ -13,7 +13,6 @@ const emojis = require('./emoji.json');
 client.emojis = emojis
 client.config = config;
 
-
 // Discord Button
 const { MessageButton, MessageActionRow } = require('discord-buttons');
 

@@ -1,0 +1,15 @@
+    const text = message.content.split(" ").slice(1).join(" ");
+    if (!text) return message.channel.send(`${emojis.no} Try again with a text!\nExample: \`${config.prefix}`)
+
+
+    let image = await Canvacord.Canvacord.(text);
+    let attachment = new Discord.MessageAttachment(image, ".png");
+    message.channel.send(attachment);
+
+    ////////////////////////////////////////
+
+    const avatar = message.mentions.users.first() || message.author;
+
+    let image = await Canvacord.Canvacord.(avatar.displayAvatarURL({ format: 'png' }));
+    let attachment = new Discord.MessageAttachment(image, ".png");
+    message.channel.send(attachment);

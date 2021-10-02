@@ -9,6 +9,7 @@
   "author": "Greblue",
   "license": "ISC",
   "dependencies": {
+    "canvacord": "^5.2.3",
     "cpu-stat": "^2.0.1",
     "discord-buttons": "^3.2.1",
     "discord-giveaways": "^4.4.3",
