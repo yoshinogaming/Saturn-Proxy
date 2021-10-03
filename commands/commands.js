@@ -12,7 +12,7 @@ exports.run = async (client, message, args) => {
     .addField(`${emojis.gift} Giveaways`, "`start` | `reroll` | `end`")
     .addField(`${emojis.support} Support`, "`invite` | `vote`")
     .addField(`${emojis.staff} Utility`, "`afk` | `ping`")
-    .addField(`${emojis.image} Image`, "`hitler` | `clyde` | `trash` | `shit` | `ohno` | `rip`")
+    .addField(`${emojis.image} Image`, "`hitler` | `delete` | `clyde` | `trash` | `shit` | `ohno` | `rip`")
     .addField(`${emojis.star} Fun`, "`gender` | `eject` | `howgay` | `rps`")
     .setTimestamp()
     .setColor(config.color)

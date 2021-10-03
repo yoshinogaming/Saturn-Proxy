@@ -11,7 +11,7 @@ exports.run = async (client, message, args) => {
     .setDescription(`**Saturn Proxy** is a cool Discord Bot, created by **${Dev}** in **May 31, 2021**. **Saturn Proxy** mission is to **help** people manage their server, telling a **information** and bringing **fun** to others.`)
     .addField(`${emojis.star} Get Started`, `To start using **Saturn Proxy** type **${client.config.prefix}commands**.\nto start a Giveaway type \n\`${client.config.prefix}start <#Channel> <Duration> [Winner] [Prize]\``, true)
     .addField(`${emojis.bell} Please Note`, "We will add a **awesome features** soon! so be ready, and get **Saturn Proxy** on your server! and don't forget to vote Saturn Proxy at **Top.gg**!", true)
-    .addField(`${emojis.staff} ChangeLogs (9/30/2021)`, `**[+]** Added hitler, shit command.`)
+    .addField(`${emojis.staff} ChangeLogs (10/2/2021)`, `**[!]** We moved from Vultr.com to Microsoft Azure.\n**[+]** Added delete command.`)
     .setTimestamp()
     .setColor(config.color)
     .setFooter(`Replying to ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))
