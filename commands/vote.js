@@ -4,12 +4,8 @@ const disbut = require('discord-buttons');
 const emojis = require("../emoji.json");
 
 exports.run = async (client, message, args) => {
-    let btn = new disbut.MessageButton()
-    .setEmoji("855704030177263616")
-    .setLabel('Click Here!')
-    .setStyle('url')
-    .setURL('https://top.gg/bot/848751663056814080/vote');
-    
+    const embed = new Discord.MessageEmbed()
+    .addField(`Vote me!`, `[Click here!](https://top.gg/bot/848751663056814080/vote)`)
 
-    message.channel.send('Vote me!', btn);
+    message.channel.send(embed);
 }
