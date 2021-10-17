@@ -1,6 +1,6 @@
 const config = require("../config.json")
 const Discord = require("discord.js")
-const disbut = require('discord-buttons');
+// const disbut = require('discord-buttons');
 
 exports.run = async (client, message, args) => {
     const embed = new Discord.MessageEmbed()
